@@ -18,12 +18,16 @@
 				}
 				Tag.attach($('#tag1'), cb, ['test', 'テストデータ'], cond);
 			}
+			function showTag() {
+				alert($('#tag1')[0].tag());
+			}
 		-->
 		</script>
 	</head>
 	<body>
 		<div id="tag1">
 		</div>
+		<button onclick="showTag()">get list of tags</button>
 		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="../tagform.js"></script>
 	</body>

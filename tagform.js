@@ -111,5 +111,13 @@ Tag = {
 		for (var i in tags) {
 			elm.append(newtag(tags[i]));
 		}
+		elm[0].tag = function() {
+			var o = elm.find('.' + Tag.TAGCLS);
+			var ret = [];
+			for ( var i=0; i<o.length; i++ ) {
+				ret.push($(o[i]).attr('n'));
+			}
+			return ret;
+		};
 	}
 };
