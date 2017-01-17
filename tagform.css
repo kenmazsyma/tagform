@@ -1,12 +1,13 @@
 
 .tagctrl {
-	margin:16px;
 	border:1px solid #fff;
-	font-size:12pt;
+	font-size:11pt;
 }
 
 .tagctrl:after {
 	clear:both;
+	content:"";
+	display:block;
 }
 
 .tagctrl > div {
@@ -16,7 +17,7 @@
 .tagctrl > div > input {
 	height:28px;
 	margin:2px;
-	font-size:12pt;
+	font-size:11pt;
 	border:0px;
 }
 
