@@ -4,6 +4,10 @@ Tag = {
 	TAGHOLE : 'taghole',
 	attach : function(elm, cb, tags, cond) {
 		var fout = false;
+		var inp_out = $('<div></div>');
+		var inp = $('<input type="text" placeholder="' + 
+					((cond&&cond.placeholder) ? cond.placeholder : '') + '">');
+		inp_out.append(inp);
 		var inpwidth = function(v) {
 			var def = (cond&&cond.placeholder) ? cond.placeholder.length : 4;
 			var len = (v.length<def) ? def+1 : v.length+1;
@@ -17,9 +21,6 @@ Tag = {
 		if (tags===undefined) tags = [];
 		elm.addClass(Tag.CTLCLS);
 		if (cond!==undefined) {
-			var inp = $('<input type="text" placeholder="' + cond.placeholder + '">');
-			var inp_out = $('<div></div>');
-			inp_out.append(inp);
 			elm.on('click', function() {
 				if (inp_out.parent().length==0) {
 					elm.css('border', '1px solid #eee').append(inp_out);
