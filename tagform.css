@@ -1,0 +1,65 @@
+
+.tagctrl {
+	margin:16px;
+	width:350px;
+	height:200px;
+	border:1px solid #fff;
+	font-size:12pt;
+}
+
+.tagctrl:after {
+	clear:both;
+}
+
+.tagctrl > div {
+	float:left;
+}
+
+.tagctrl > div > input {
+	height:28px;
+	margin:2px;
+	font-size:12pt;
+	border:0px;
+}
+
+.tagctrl > div > input:focus {
+	outline:0px;
+}
+
+.tag {
+	background-color:#8b4;
+	color:#fff;
+	padding:2px 6px 2px 6px;
+	height:28px;
+	margin:2px;
+	display: -webkit-flex;
+	display:flex;
+	-webkit-border-radius: 14px;
+	border-radius: 14px;
+	-webkit-box-shadow:2px 2px 3px #ddd;
+	box-shadow:2px 2px 3px #ddd;
+	-webkit-align-items: center;
+	align-items: center;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	cursor:default;
+}
+
+.tag > .taghole {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-align-items: center;
+	-webkit-box-shadow:2px 2px 3px #ddd inset;
+	box-shadow:2px 2px 3px #ddd inset;
+	align-items: center;
+	margin-left:6px;
+	width:10px;
+	height:10px;
+	background-color:#fff;
+	color:#666;
+	font-size:8pt;
+	font-weight:bold;
+	line-height:8pt;
+	text-align:center;
+}

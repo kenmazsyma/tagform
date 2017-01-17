@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="test.css">
+		<link rel="stylesheet" href="../tagform.css">
+		<script type="text/javascript">
+		-->
+			window.onload = function() {
+				var cond = {
+					maxlen : 16,
+					max : 7,
+					placeholder : '入力'
+				};
+				var cb = function(name) {
+					alert(name);
+				}
+				Tag.attach($('#tag1'), cb, ['test', 'テストデータ'], cond);
+			}
+		-->
+		</script>
+	</head>
+	<body>
+		<div id="tag1">
+		</div>
+		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="../tagform.js"></script>
+	</body>
+</html>
