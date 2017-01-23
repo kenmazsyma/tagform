@@ -19,7 +19,10 @@ Tag = {
 			return (tags.length>=cond.max);
 		};
 		if (tags===undefined) tags = [];
-		elm.addClass(Tag.CTLCLS);
+		elm.html('');
+		if (!elm.hasClass(Tag.CTLCLS)) {
+			elm.addClass(Tag.CTLCLS);
+		}
 		if (cond!==undefined) {
 			elm.on('click', function() {
 				if (inp_out.parent().length==0) {
@@ -110,7 +113,7 @@ Tag = {
 			return elm;
 		}
 		for (var i in tags) {
-			elm.append(newtag(tags[i]));
+			if (tags[i]) elm.append(newtag(tags[i]));
 		}
 		elm[0].tag = function() {
 			var o = elm.find('.' + Tag.TAGCLS);
