@@ -24,7 +24,7 @@ Tag = {
 			elm.addClass(Tag.CTLCLS);
 		}
 		if (cond!==undefined) {
-			elm.on('click', function() {
+			elm.on('click', function(e) {
 				if (inp_out.parent().length==0) {
 					elm.css('border', '1px solid #eee').append(inp_out);
 					inpwidth('');
@@ -67,7 +67,6 @@ Tag = {
 					}).focus();
 					tagmode(true);
 				}
-			}).click(function(e) {
 				fout = false;
 				e.preventDefault(); 
 				return false;
